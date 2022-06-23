@@ -1,0 +1,248 @@
+/* V A R I A B L E S */
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 90px 0;
+}
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    --wave-top: url('../images/bg-pattern-top-mobile.svg');
+    --wave-bottom: url('../images/bg-pattern-bottom-mobile.svg');
+}
+
+.main__information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.main__text {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.main__title {
+    color: var(--Very-Dark-Magenta);
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 0.8;
+}
+
+.main__paragraph {
+    margin-top: 25px;
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 500;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.main__ratings {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main__statistic {
+    width: 100%;
+    max-width: 450px;
+    padding: 14px 24px;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__img {
+    margin: 0 3px;
+}
+
+.main__rating {
+    color: var(--Very-Dark-Magenta);
+    font-size: 17px;
+    margin-top: 6px;
+}
+
+/* Testimonios */
+.main__testimony {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main__users {
+    width: 100%;
+    padding: 35px;
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--White);
+    border-radius: 10px;
+}
+
+.main__user {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.main__picture {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main__profile {
+    width: 100%;
+}
+
+.main__name {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.main__status {
+    display: block;
+    color: var(--Soft-Pink);
+    font-size: 17px;
+    margin-top: 6px;
+    font-weight: 400;
+}
+
+.main__message {
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+/* Waves */
+.wave {
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.wave--top {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 250px;
+    background-image: var(--wave-top);
+    background-size: 100% 250px;
+}
+
+.wave--bottom {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 500px;
+    background-image: var(--wave-bottom);
+    background-size: 100% 500px;
+}
+
+/* Diseño para ordenador */
+@media (min-width: 900px) {
+    .main {
+        --wave-top: url('../images/bg-pattern-top-desktop.svg');
+        --wave-bottom: url('../images/bg-pattern-bottom-desktop.svg');
+    }
+
+    .main__information {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .main__text {
+        text-align: start;
+    }
+
+    .main__title {
+        margin: 0 auto 0 0;
+    }
+
+    .main__ratings {
+        margin: 0;
+    }
+
+    .main__testimony {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .main__users {
+        width: 320px;
+        height: 260px;
+    }
+
+    .wave--top {
+        width: 40%;
+        height: 300px;
+        background-size: 100% 300px;
+    }
+    
+    .wave--bottom {
+        width: 80%;
+        height: 600px;
+        background-size: 100% 600px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .main__statistic {
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .main__statistic--left {
+        margin-right: auto;
+    }
+
+    .main__statistic--rigth {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1325px) {
+    .main__users--top {
+        margin-top: 30px;
+    }
+
+    .main__users--bottom {
+        margin-top: 60px;
+    }
+}
