@@ -97,7 +97,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .main__users {
@@ -204,8 +204,7 @@ body {
     }
 
     .main__users {
-        width: 320px;
-        height: 260px;
+        width: 340px;
     }
 
     .wave--top {
@@ -237,7 +236,7 @@ body {
     }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1320px) {
     .main__users--top {
         margin-top: 30px;
     }
