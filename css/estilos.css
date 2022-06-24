@@ -236,7 +236,7 @@ body {
     }
 }
 
-@media (min-width: 1320px) {
+@media (min-width: 1313px) {
     .main__users--top {
         margin-top: 30px;
     }
